@@ -1,0 +1,28 @@
+<%- include("partials/header") -%>
+<h1>Home</h1>
+<!-- <p><%= startingContent %></p> -->
+
+<% for(i = postKey.length-1; i >= 0; i--) { %>
+        <% console.log(postKey[i].title) %>
+
+           
+        <h2> <%= postKey[i].title %></h2> <h5>(<%= dateKey[i] %>)</h5>
+       <% console.log(dateKey[i]); %>
+        <p> <%= postKey[i].content.substring(0, 100) %> <a href="/post/<%= postKey[i].title %>">...</a></p>
+       
+<% }; %>
+
+<%- include("partials/footer") -%>
+
+<!-- for(i = postKey[postKey.length-1]; i >= 0; i--) {
+    console.log(postKey[i].title); 
+    console.log(postKey[i].content);
+    };}
+ -->
+
+
+
+    <!-- <% for(i = 0; i < postKey.length; i++) { %>
+        <h1> <%= postKey[i].title %> </h1>
+        <p> <%= postKey[i].content %> </p>
+<% }; %> -->
